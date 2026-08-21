@@ -1,0 +1,13 @@
+# Groq's API is used via the standard OpenAI-compatible client - no local
+# model, no torch, no transformers, nothing multi-GB to download anymore.
+
+fastapi
+uvicorn==0.46.0          # from venv
+pydantic==2.13.4         # from venv
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+
+# I can't stop thinking about this presentation tomorrow
+# be honest, do you think I've been struggling lately?
+# actually I went for a run this morning and feel amazing
