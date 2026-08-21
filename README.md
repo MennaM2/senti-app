@@ -2,6 +2,11 @@
 
 An AI-first mental-wellness companion. The chat with **Senti** is the main experience of the app - mood tracking and history support the conversation instead of competing with it.
 
+## 🎥 DEMO VIDEO
+https://github.com/user-attachments/assets/fb4f0bee-6875-4799-86eb-d53b6f590844
+
+
+
 <!--
 SCREENSHOTS
 Add 3-4 screenshots here once you have them, e.g.:
