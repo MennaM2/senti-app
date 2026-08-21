@@ -1,0 +1,59 @@
+<svg viewBox="0 0 940 460" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3A3A37"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="940" height="460" fill="#FAFAF8"/>
+
+  <!-- Frontend box -->
+  <rect x="40" y="150" width="230" height="180" rx="12" fill="#FFFFFF" stroke="#D8D8D4" stroke-width="1.5"/>
+  <text x="155" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#232321">React Frontend</text>
+  <text x="155" y="200" text-anchor="middle" font-size="11" fill="#8A8A85">localhost:3000</text>
+  <line x1="60" y1="212" x2="250" y2="212" stroke="#E3E3DF" stroke-width="1"/>
+  <text x="70" y="236" font-size="12.5" fill="#4A4A46">Chat screen</text>
+  <text x="70" y="260" font-size="12.5" fill="#4A4A46">Insights screen</text>
+  <text x="70" y="284" font-size="12.5" fill="#4A4A46">Mood history sidebar</text>
+  <text x="70" y="308" font-size="12.5" fill="#4A4A46">Multi-chat sidebar</text>
+
+  <!-- Backend box -->
+  <rect x="360" y="100" width="260" height="280" rx="12" fill="#FFFFFF" stroke="#D8D8D4" stroke-width="1.5"/>
+  <text x="490" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#232321">FastAPI Backend</text>
+  <text x="490" y="150" text-anchor="middle" font-size="11" fill="#8A8A85">localhost:5000</text>
+  <line x1="380" y1="162" x2="600" y2="162" stroke="#E3E3DF" stroke-width="1"/>
+  <text x="390" y="186" font-size="12.5" fill="#4A4A46">POST /api/chat</text>
+  <text x="390" y="208" font-size="12.5" fill="#4A4A46">POST /api/mood</text>
+  <text x="390" y="230" font-size="12.5" fill="#4A4A46">GET /api/moods</text>
+  <text x="390" y="252" font-size="12.5" fill="#4A4A46">GET /api/chat-history</text>
+  <line x1="380" y1="266" x2="600" y2="266" stroke="#E3E3DF" stroke-width="1"/>
+  <text x="390" y="290" font-size="12.5" font-weight="600" fill="#232321">Tool functions</text>
+  <text x="390" y="310" font-size="12" fill="#4A4A46">log_mood(mood, note)</text>
+  <text x="390" y="330" font-size="12" fill="#4A4A46">get_recent_moods(limit)</text>
+  <text x="390" y="356" font-size="11" fill="#8A8A85">executed locally, not by Groq</text>
+
+  <!-- Groq box -->
+  <rect x="700" y="30" width="200" height="110" rx="12" fill="#232321"/>
+  <text x="800" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#FAFAF8">Groq API</text>
+  <text x="800" y="90" text-anchor="middle" font-size="11.5" fill="#C7C7C2">openai/gpt-oss-120b</text>
+  <text x="800" y="112" text-anchor="middle" font-size="11" fill="#9A9A95">chat completions + tools</text>
+
+  <!-- Database box -->
+  <rect x="700" y="330" width="200" height="100" rx="12" fill="#FFFFFF" stroke="#D8D8D4" stroke-width="1.5"/>
+  <text x="800" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#232321">database.json</text>
+  <text x="800" y="388" text-anchor="middle" font-size="11" fill="#8A8A85">moods, chat_history</text>
+  <text x="800" y="405" text-anchor="middle" font-size="11" fill="#8A8A85">flat file, no server</text>
+
+  <!-- Arrow: Frontend -> Backend -->
+  <line x1="270" y1="240" x2="352" y2="240" stroke="#3A3A37" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="311" y="228" text-anchor="middle" font-size="11.5" fill="#4A4A46">REST / JSON</text>
+
+  <!-- Arrow: Backend <-> Groq -->
+  <line x1="608" y1="180" x2="710" y2="115" stroke="#3A3A37" stroke-width="1.75" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="700" y="150" text-anchor="middle" font-size="11.5" fill="#4A4A46">chat completions</text>
+  <text x="700" y="164" text-anchor="middle" font-size="11.5" fill="#4A4A46">(+ tool_calls)</text>
+
+  <!-- Arrow: Backend <-> database -->
+  <line x1="608" y1="330" x2="710" y2="365" stroke="#3A3A37" stroke-width="1.75" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="700" y="312" text-anchor="middle" font-size="11.5" fill="#4A4A46">read / write</text>
+</svg>
