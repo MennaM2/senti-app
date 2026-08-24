@@ -42,6 +42,11 @@ Suggested 60-90s structure:
 
 The frontend never talks to Groq directly - all model calls happen server-side in FastAPI, and the frontend only ever calls the four `/api/*` routes shown above.
 
+## Screenshots
+
+![Chat Interface](./chat.png)
+![Mood Tracking](./mood-tracking.png)
+
 ## Features
 
 - **AI chat companion** (`/api/chat`) - the core experience, powered by Groq (`openai/gpt-oss-120b`)
@@ -149,4 +154,17 @@ involves two round trips to Groq instead of one, so expect those to run
 noticeably slower than plain conversational replies.
 -->
 
-*(Run `measure_latency.py` and paste your real results here.)*
+------------------------------------------------------------
+Markdown table (paste into README's Performance section):
+------------------------------------------------------------
+
+| Endpoint | Metric | Value |
+|---|---|---|
+| `POST /api/chat` | Min | 1.75s |
+| `POST /api/chat` | Mean | 7.50s |
+| `POST /api/chat` | Median | 7.01s |
+| `POST /api/chat` | Max | 17.02s |
+| `/api/moods` | Response time | 38 ms |
+| `/api/chat-history` | Response time | 42 ms |
+
+*(measured with 8 sample messages against the live Groq-backed API, 2026-08-24)*
